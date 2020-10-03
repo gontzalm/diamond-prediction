@@ -2,7 +2,10 @@ import pandas as pd
 
 
 DATASETS_PATH = "../datasets"
+ORIGINAL = "diamonds.csv"
+
 
 def load_diamonds():
     """Load the diamond dataset into a pandas.DataFrame."""
-    return pd.read_csv(DATASETS_PATH, engine="python")
+    path = f"{DATASETS_PATH}/{ORIGINAL}"
+    return pd.read_csv(path, engine="python", index_col="id")
