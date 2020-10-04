@@ -30,3 +30,8 @@ def split_train_test(diamonds):
         set_.drop(columns="carat_cat", inplace=True)
 
     return train_set, test_set
+
+
+def split_X_y(data):
+    """Split data into design matrix (X) and target (y)."""
+    return data.drop(columns="price"), data["price"]
