@@ -27,6 +27,6 @@ def split_train_test(diamonds):
     
     # Drop the category column
     for set_ in train_set, test_set:
-        set_.drop(columns="carat_cat")
+        set_.drop(columns="carat_cat", inplace=True)
 
     return train_set, test_set
