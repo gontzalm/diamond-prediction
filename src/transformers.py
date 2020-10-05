@@ -22,7 +22,7 @@ class AttributeAdder(TransformerMixin):
             if "x_times_y" in self.which:
                 X["x_times_y"] = X["x"] * X["y"]
             if "x_squared_times_y" in self.which:
-                X["x_squared_times_y"] = X["x_squared"] * X["y"]
+                X["x_squared_times_y"] = (X["x"] ** 2) * X["y"]
         return X
 
 
