@@ -1,4 +1,4 @@
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import cross_val_score
 from sklearn.pipeline import Pipeline
@@ -36,6 +36,11 @@ for prep_name, preprocessor in PREPROCESSORS.items():
         "tree": Pipeline([
             ("preprocessor", preprocessor),
             ("regressor", DecisionTreeRegressor()) 
+        ]),
+
+        "gbrt": Pipeline([
+            ("preprocessor", preprocessor),
+            ("regressor", GradientBoostingRegressor()) 
         ]),
     
         "forest": Pipeline([
