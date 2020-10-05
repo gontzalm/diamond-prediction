@@ -1,5 +1,9 @@
 import numpy as np
 
+DATASETS_PATH = "../datasets"
+ORIGINAL = "diamonds.csv"
+PREDICT = "predict.csv"
+SUBMISSIONS_PATH = "../submissions"
 
 BINS = {
     "depth": [np.NINF, 56.49, 57.49, 57.99, 58.99, 62.3, 63.5, 64.1, 65, np.inf],

@@ -1,9 +1,5 @@
+from src.conf import DATASETS_PATH, ORIGINAL, PREDICT
 import pandas as pd
-
-
-DATASETS_PATH = "../datasets"
-ORIGINAL = "diamonds.csv"
-PREDICT = "predict.csv"
 
 
 def load_diamonds():

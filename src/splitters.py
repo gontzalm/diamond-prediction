@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.model_selection import StratifiedShuffleSplit
 
 
-def split_train_test(diamonds):
+def split_train_test(diamonds, test_size=0.1):
     """Split the data performing a stratified split (carat)."""
     # Create carat categories
     diamonds["carat_cat"] = pd.cut(
@@ -16,7 +16,7 @@ def split_train_test(diamonds):
     # Create a stratified splitter with fixed random state
     splitter = StratifiedShuffleSplit(
         n_splits=1,
-        test_size=0.2,
+        test_size=test_size,
         random_state=42
     )
 
